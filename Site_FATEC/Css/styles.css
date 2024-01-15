@@ -1,0 +1,368 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+:root {
+    --color-primary: #03B0C5;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    background-color: rgb(49, 49, 49);
+}
+
+ /* NAVBAR */
+
+ .mobile-menu {
+    display: none; /* Oculta o menu no início */
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+}
+
+.hamburger-button {
+    display: block;
+    font-size: 24px; /* Estilize o botão como quiser */
+    margin: 4%;
+    color: white;
+    background: none;
+    border: none;
+}
+.menu {
+    display: none;
+    background-color: rgb(49, 49, 49);
+    font-weight: 400;
+    font-size: 0;
+    width: 100%;
+}
+
+.menu .item {
+    display: block;
+    padding: 10px 0; /* Adapte o espaçamento conforme necessário */
+    color: white;
+    text-align: center;
+}
+
+nav {
+    position: relative;
+    background-color: rgb(65, 65, 65);
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    width: 100%;
+}
+
+.dropdown {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 62px;
+    display: none;
+}
+.aux {
+    color: white;
+    font-size: 1rem;
+}
+
+.item:hover {
+    color: var(--color-primary);
+    text-shadow: 0 0 5px #6bfae5;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Centralize o ponto de origem no centro do item */
+    transform: translateX(-50%); /* Centralize o ponto de origem no centro do item */
+    width: 0;
+    height: 3px; /* Ajuste a altura da borda inferior conforme necessário */
+    background-color: white;
+    transition: width 0.5s;
+    transform-origin: center; /* Defina o ponto de origem para o centro */
+}
+
+.item:hover::before {
+    width: 100%; /* A largura é definida como 100% no hover */
+}
+
+.item:hover .dropdown {
+    display: block;
+}
+
+.item {
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    padding: 0 3%;
+    cursor: pointer;
+    z-index: 5;
+    min-width: 10%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+
+
+
+.dropdown > a {
+    transform: translate(0, -100%);
+    transition: 0.5s 0.1s; /* Correção na sintaxe da transição */
+    position: relative;
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    -webkit-transition: 0.5s 0.1s; /* Correção na sintaxe da transição */
+    -moz-transition: 0.5s 0.1s; /* Correção na sintaxe da transição */
+    -ms-transition: 0.5s 0.1s; /* Correção na sintaxe da transição */
+    -o-transition: 0.5s 0.1s; /* Correção na sintaxe da transição */
+  }
+
+
+.dropdown a {
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background: var(--color-primary);
+}
+
+.dropdown a:hover {
+    background: #03B0C5;
+}
+
+nav .item:hover > .dropdown > a {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+}
+  
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+        text-decoration: none;
+    }
+    .mobile-menu {
+        display: block; /* Exibe o menu na tela menor */
+    }
+
+    .menu {
+        display: block; /* Exibe o menu na tela menor */
+    }
+    .dropdown {
+        position: static; /* Remove a posição absoluta */
+        display: none; /* Oculta a dropdown inicialmente */
+    }
+    .item:hover .dropdown {
+        display: block; /* Mostra a dropdown no hover */
+    }
+    .custom-shape-divider-bottom-1698152985 {
+        top: 84%;
+        bottom: 0;
+    }
+}
+
+   /* FIM NAVBAR*/
+   
+
+   /* CONTENT*/
+ 
+
+   /* FIM CONTENT*/
+
+    /* FOOTER */
+    footer {
+        width: 100%;
+        background-color: rgb(49, 49, 49);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .footeritem {
+        text-decoration: none;
+        justify-content: center;
+        margin: 0 0.6%;
+        transition: color 0.3s;
+        position: relative;
+        color: white;
+    }
+
+    .line {
+        margin: 1%;
+        background-color: white;
+        height: 1px;
+        width: 80%;
+    }
+    .copyrigth {
+        margin: 0 10%;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    .footeritem:hover {
+        color: var(--color-primary);
+    }
+    
+    .footeritem::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%; /* Centralize o ponto de origem no centro do item */
+        transform: translateX(-50%); /* Centralize o ponto de origem no centro do item */
+        width: 0;
+        height: 3px; /* Ajuste a altura da borda inferior conforme necessário */
+        background-color: #0A7868;
+        transition: width 0.5s;
+        transform-origin: center; /* Defina o ponto de origem para o centro */
+    }
+
+    .footeritem:hover::before {
+        width: 100%; /* A largura é definida como 100% no hover */
+    }
+
+    @media screen and (max-width: 768px) {
+        
+        .row {
+            display: none;
+        }
+
+        .shape3 {
+            display: none;
+        }
+    }
+
+      /* FIM FOOTER */
+
+      /* CUSTOM SHAPE */
+
+    .shape {
+        width: 100%;
+        overflow: hidden;
+    }
+    .custom-shape-divider-bottom-1698152985 {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 120%;
+        line-height: 0;
+        transform: rotate(180deg);
+        z-index: 1;
+        background: rgb(49,49,49);
+        animation: moveWaves 6s linear infinite alternate; /* Adicione a animação */
+    }
+    
+    .custom-shape-divider-bottom-1698152985 svg {
+        overflow: hidden;
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 93px;
+        z-index: 1;
+    }
+    
+    .custom-shape-divider-bottom-1698152985 .shape-fill {
+        fill: #329097;
+    }
+
+    @keyframes moveWaves {
+        0% {
+            transform: translateX(0) rotate(180deg); /* Inicialmente, sem movimento */
+        }
+        50% {
+            transform: translateX(-4%)  rotate(180deg);   ;
+    }
+        100% {
+            transform: translateX(0) rotate(180deg); /* Fim da animação: volta à posição inicial */
+        }
+    }
+
+    @keyframes moveWaves2 {
+        0% {
+            transform: translateX(0); /* Inicialmente, sem movimento */
+        }
+        50% {
+            transform: translateX(-4%); 
+    }
+        100% {
+            transform: translateX(0); /* Fim da animação: volta à posição inicial */
+        }
+    }
+
+    @keyframes textneon {
+    
+        0% {
+            text-shadow: 0 0 4px #e0fdff, 0 0 6px #a2eff5, 0 0 12px #6beff8, 0 0 16px #38f2ff;
+        }
+        100% {
+            text-shadow: 0 0 6px #5bf4ff, 0 0 8px #23e8f7, 0 0 16px #24ecfa, 0 0 20px #07eeff;
+        }
+    }
+
+    .custom-shape-divider-top-1698174307 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 120%;
+        overflow: hidden;
+        line-height: 0;
+        animation: moveWaves2 10s ease-in-out alternate infinite;
+    }
+    
+    .custom-shape-divider-top-1698174307 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 78px;
+    }
+    
+    .custom-shape-divider-top-1698174307 .shape-fill {
+        fill: #40BAC3;
+    }
+    
+    .shape2 {
+
+        width: 100%;
+        border-radius: 0 0 50% 50%;
+        background: rgb(49,49,49);
+        height: 100px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .shape3 {
+
+        width: 100%;
+        border-radius: 0 0 50% 50%;
+        background: rgb(49,49,49);
+        height: 100px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+      }
+    
+    /* FIM CUSTOM SHAPE */
+
+    
+   
